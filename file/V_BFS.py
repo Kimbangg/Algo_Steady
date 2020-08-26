@@ -5,7 +5,6 @@ for _ in range(M):
     link = list(map(int, input().split()))
     matrix[link[0]][link[1]] = 1
     matrix[link[1]][link[0]] = 1
-# 주어진 간선을 양쪽으로 이어지게 0,1 1,0을 1로 만들어준다.
 
 def dfs(current_node, row, visited):
     visited += [current_node]
@@ -26,6 +25,6 @@ def bfs(start):
                 queue += [search_node]
     return visited
 
-
 print(*dfs(V, matrix, []))
 print(*bfs(V))
+# *는 list or set과 같은 컨테이너 형태의 자료를 풀 때 사용하는 연산자.
